@@ -1,25 +1,454 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="css/index.css">
-        <title>Hello World</title>
-        <script src="cordova.js"></script>
-        <script src="js/in1|32456780¿ex.js"></script>/
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="resources/styles.css">
+
+    <title>
+        AXIS Cloud
+    </title>
+    <link rel="icon" href="resources\images\axis_cloud_logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="resources\images\axis_cloud.png" class="img-fluid me-2" style="max-height: 60px;"
+                            alt="Logo de Axis Cloud" class="logo">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a href="about.html" class="nav-link">Nosotros</a></li>
+                            <li class="nav-item"><a href="#comentarios" class="nav-link">Reviews</a></li>
+                            <li class="nav-item"><a href="servicios.html" class="nav-link">Servicios</a></li>
+                            <li class="nav-item"><a href="Desarrolladores.html" class="nav-link">Devs</a></li>
+                            <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                            <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <section id="hero">
+
+            <div class="welcome">
+                <video autoplay muted loop id="fondo" class="fondo">
+                    <source src="resources\images\axis_bg.mp4" type="video/mp4">
+                </video>
+                <img src="resources\images\axis_cloud.png">
+                <h1 class="display-4">Bienvenido a AXIS Cloud</h1>
+                <p class="lead">"Tu socio estratégico en la nube". Soluciones en la nube para tu negocio</p>
+                <hr class="my-4">
+                <p>Ofrecemos un amplio conjunto de productos globales basados en la nube que ayudan a las
+                    organizaciones
+                    a avanzar más rápido, reducir los costos de TI y escalar.
+                </p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="servicios.html" role="button">Explorar Servicios</a>
+                    <a class="btn btn-primary btn-lg" href="contacto.html">Contactanos</a>
+                </p>
             </div>
-        </div>
-        
-    </body>
+            </div>
+        </section>
+
+        <section id="beneficios">
+            <div class="container text-center">
+                <h1>Contrátanos</h1>
+                <div class="row g-4 justify-content-center align-items-center">
+                    <ul class="benefits-list col-12 col-md-6">
+                        <li><i class="bi bi-check2"></i> Escalado automático horizontal y vertical</li>
+                        <li><i class="bi bi-check2"></i> Disponibilidad 24/7 con monitoreo continuo</li>
+                        <li><i class="bi bi-check2"></i> Optimización de costos según uso real</li>
+                        <li><i class="bi bi-check2"></i> Alta disponibilidad y baja latencia</li>
+                        <li><i class="bi bi-check2"></i> Acceso desde cualquier parte del mundo</li>
+                        <li><i class="bi bi-check2"></i> Red de centros de datos certificados</li>
+                        <li><i class="bi bi-check2"></i> Migración segura y sin interrupciones</li>
+                        <li><i class="bi bi-check2"></i> Compatibilidad con sistemas existentes (Windows, Linux, SQL,
+                            NoSQL)</li>
+                        <li><i class="bi bi-check2"></i> Consultoría personalizada para cada tipo de empresa</li>
+                    </ul>
+
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="https://www.sivsa.com/site/wp-content/uploads/2025/05/primer-plano-de-la-mano-sosteniendo-un-boligrafo-digitalizado-por-datos-en-el-monitor-de-la-computadora.jpg"
+                            alt="Consultoría digital" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            
+                <h2>Infraestructura Global</h2>
+                <p>AXIS CLOUD conecta a tu empresa con las plataformas más robustas del mundo: AWS, Google Cloud y
+                    Azure.
+                    Gracias a nuestra integración con zonas de disponibilidad globales, tu negocio puede operar desde
+                    cualquier lugar con alta velocidad, redundancia y seguridad. Ya sea que estés en México, Colombia o
+                    Argentina, tu infraestructura estará respaldada por tecnología de clase mundial.
+                </p>
+                <img src="https://physicsworld.com/wp-content/uploads/2022/01/flight-routes-global-1227021821-iStock_DKosig.jpg">
+
+
+                <h2>Escalabilidad y Disponibilidad</h2>
+                <img src="https://www.sistemaimpulsa.com/blog/wp-content/uploads/2021/01/escalabilidad-de-un-negocio.jpg">
+                <p>Con AXIS CLOUD, puedes escalar tus recursos en segundos, adaptándote a la demanda del mercado sin
+                    interrupciones. Ya sea que necesites más potencia en temporada alta o reducir costos en momentos de
+                    baja
+                    actividad, nuestra arquitectura flexible lo hace posible.
+                </p>
+
+                <h2>Migración y Compatibilidad</h2>
+                <p>Migrar a la nube no tiene por qué ser complejo. AXIS CLOUD te acompaña en cada paso: desde el
+                    análisis
+                    inicial hasta la implementación completa. Nos aseguramos de que tus aplicaciones, bases de datos y
+                    sistemas actuales se integren sin fricciones, manteniendo la compatibilidad y continuidad operativa.
+                </p>
+                <img src="https://www.itmastersmag.com/wp-content/uploads/2022/07/migracion-a-la-nube.png">
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="cta">
+            <div class="container">
+                <h1>¡Transforma tu negocio con la nube ahora!</h1>
+                <div class="contenedor">
+                    <div>
+                        <h2>¿Listo para escalar tu PyME al siguiente nivel?</h2>
+                        <p>
+                            Obtén una auditoría gratuita de tu infraestructura actual, te mostraremos cómo reducir
+                            costos y mejorar la
+                            eficiencia. <strong>¿Qué estás esperando?</strong> Únete a la transformación digital — los
+                            servicios en la
+                            nube son el futuro.
+                        </p>
+                    </div>
+
+                    <img src="https://images.ctfassets.net/9pvazpst9iwl/Ugt8DIiaAGDm4xUjTBKVq/9a0ae26d9021ebb3d5b8381bf28b0e10/Cuantas_20PYMES_20hay_20en_20Mexico_20y_20que_20datos_20relevantes_20sobre_20estas_20debemos_20considerar.jpeg"
+                        alt="PYMES en México" class="img-fluid rounded shadow-sm">
+                </div>
+                <h1>Nuestros Partners Tecnológicos</h1>
+                <p class="mb-4">
+                    En AXIS Cloud, trabajamos junto a los líderes globales en tecnología para ofrecerte soluciones
+                    robustas, seguras y escalables. Nuestros partners tecnológicos —AWS, Google Cloud, Microsoft Azure,
+                    Oracle Cloud e IBM Cloud— nos permiten brindarte acceso a plataformas de clase mundial, adaptadas a
+                    las necesidades de tu empresa. Ya sea que busques almacenamiento, cómputo, inteligencia artificial o
+                    bases de datos, tenemos el respaldo ideal para impulsar tu transformación digital.
+                </p>
+
+                <div id="partners">
+
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxwAJg1FHFRXGEs1CsFhqGeM35rV-OCQz62g&s"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">AWS (Amazon Web Services)</h5>
+                                    <p class="card-text">Plataforma líder del mercado, destaca por su infraestructura
+                                        global
+                                        extensa y la mayor cantidad de servicios.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Amplio</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="https://aws.amazon.com/" class="card-link">Visitar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL3q5aHTmA09n7DHbzDgjJykAsHavUUn21aw&s"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Google Cloud Platform</h5>
+                                    <p class="card-text">Fuerte en análisis de datos, IA/ML y tecnologías de código
+                                        abierto como
+                                        Kubernetes.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Datos</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href=" https://cloud.google.com/?hl=es" class="card-link">Visitar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://brandlogos.net/wp-content/uploads/2022/07/microsoft_azure-logo_brandlogos.net_mlyt6.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Microsoft Azure</h5>
+                                    <p class="card-text">Destaca en la nube híbrida y se integra perfectamente con los
+                                        productos
+                                        empresariales de Microsoft.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Híbrido</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="https://azure.microsoft.com/es-es/" class="card-link">Visitar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="data:image/png;base64,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"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oracle Cloud</h5>
+                                    <p class="card-text">Se especializa en bases de datos de alto rendimiento y
+                                        aplicaciones
+                                        empresariales (ERP, HCM, SCM), ideal para clientes que ya utilizan el software
+                                        de
+                                        Oracle.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Bases</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="https://www.oracle.com/es/cloud/" class="card-link">Visitar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top"
+                                    src="https://www.freelogovectors.net/wp-content/uploads/2020/02/ibm-cloud-logo.png"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">IBM Cloud</h5>
+                                    <p class="card-text">Enfocado en soluciones de nube híbrida, inteligencia artificial
+                                        (IA)
+                                        con Watson y servicios para industrias altamente reguladas que necesitan
+                                        estrictas
+                                        medidas de cumplimiento.</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Empresarial</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="https://www.ibm.com/es-es/cloud" class="card-link">Visitar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comentarios">
+            <div class="container mt-5">
+                <h1>Reviews Destacadas</h1>
+                <h2>Lo que dicen nuestros clientes</h2>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- Card 1 -->
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        DataNova Solutions
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p>“Migrar nuestra infraestructura a Cloud Axis fue una de las mejores
+                                                decisiones del año. La velocidad de despliegue y la estabilidad del
+                                                servicio
+                                                superaron nuestras expectativas. El soporte técnico es impecable:
+                                                rápido,
+                                                claro y siempre dispuesto a ayudar.”</p>
+                                            <footer class="blockquote-footer">Laura Méndez <cite
+                                                    title="Source Title">CTO en
+                                                    DataNova Solutions</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        TechCorp
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p>“He usado varias plataformas cloud, pero ninguna tan intuitiva como Cloud
+                                                Axis. Su panel de control facilita muchísimo la gestión de instancias y
+                                                bases de datos. Ideal para equipos de desarrollo que buscan agilidad.”
+                                            </p>
+                                            <footer class="blockquote-footer">Juan Pérez <cite
+                                                    title="Source Title">Desarrollador en TechCorp</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        StartGrow
+                                    </div>
+                                    <div class="card-body">
+                                        <blockquote class="blockquote mb-0">
+                                            <p>“Gracias a Cloud Axis, pudimos escalar nuestra aplicación sin
+                                                interrupciones.
+                                                Lo mejor es el modelo de pago por uso, que realmente se adapta a
+                                                startups
+                                                con presupuestos limitados. 100% recomendable.”</p>
+                                            <footer class="blockquote-footer">Ana Beltrán <cite
+                                                    title="Source Title">Fundadora de StartGrow</cite></footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span>Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span>Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h1>Preguntas Frecuentes</h1>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                ¿Qué es AXIS Cloud?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">AXIS Cloud es un proveedor líder de soluciones en la nube
+                                diseñadas
+                                para pequeñas y medianas empresas.
+                                Ofrecemos una amplia gama de servicios que incluyen almacenamiento en la nube,
+                                computación,
+                                seguridad y
+                                más.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                ¿Cómo puedo contratar sus servicios?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Puedes explorar nuestros servicios destacados en la sección
+                                correspondiente y ponerte en contacto con
+                                nosotros a través de la página de contacto para obtener más información y asistencia
+                                personalizada.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                ¿Ofrecen soporte técnico?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Sí, contamos con un equipo de soporte técnico disponible para
+                                ayudarte con cualquier consulta o problema
+                                relacionado con nuestros servicios en la nube.
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseFour">
+                                    ¿Ofrecen capacitación para el uso de sus servicios?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Sí, ofrecemos capacitación para el uso de nuestros
+                                    servicios. Puedes ponerte en contacto con nuestro equipo para obtener más
+                                    información sobre las opciones de capacitación disponibles.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+        </section>
+
+        <footer class="py-4 bg-body-tertiary">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <small class="text-muted"> © 2025 AXIS CLOUD | Derechos Reservados
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
+                </small>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
 </html>

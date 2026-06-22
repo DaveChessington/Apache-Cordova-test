@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Devs</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="resources/styles.css">
+  <link rel="icon" href="resources\images\axis_cloud_logo.ico" type="image/x-icon">
+</head>
+
+<body>
+  <main>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="resources/images/axis_cloud.png" class="img-fluid me-2" style="max-height: 60px;"
+              alt="Logo de Axis Cloud">
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
+              <li class="nav-item"><a href="desarrolladores.html" class="nav-link active">Desarrolladores</a></li>
+              <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="hero" class="text-center py-5">
+      <div class="container text-center">
+                <img src="https://www.mccormick.northwestern.edu/images/news/2025/01/study-reveals-why-in-person-conferences-still-matter-in-a-virtual-world-header.jpg" class="hero-bg"> 
+                <div class="jumbotron">
+                    <h1 class="display-4">Contáctanos</h1>
+                    <p class="lead">Estamos listos para ayudarte a llevar tu empresa a la nube.</p>
+                    <hr class="my-4">
+                    <p>En AXIS CLOUD, valoramos la comunicación directa con nuestros clientes. Cuéntanos tus necesidades y nuestro
+          equipo te contactará pronto.</p>
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#contacto" role="button">Más información</a>
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 text-primary fw-bold"><i class="bi bi-envelope-fill"></i> Ponte en contacto</h2>
+
+        <div class="row g-4">
+          <!-- Formulario -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4">
+                <h5 class="card-title mb-3 text-primary fw-bold"><i class="bi bi-chat-dots"></i> Envíanos un mensaje
+                </h5>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="subject" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Motivo del mensaje">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="4"
+                      placeholder="Escribe tu mensaje aquí..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Información de contacto -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body p-4">
+                <h5 class="card-title mb-3 text-primary fw-bold"><i class="bi bi-geo-alt-fill"></i> Nuestra oficina</h5>
+                <p class="text-muted mb-4">Siempre disponibles para atenderte, tanto en línea como presencialmente.</p>
+
+                <ul class="list-unstyled">
+                  <li class="mb-3"><i class="bi bi-telephone-fill text-primary me-2"></i><strong>Teléfono:</strong> +52
+                    55 1234 5678</li>
+                  <li class="mb-3"><i class="bi bi-envelope-fill text-primary me-2"></i><strong>Email:</strong>
+                    contacto@axicloud.com</li>
+                  <li class="mb-3"><i class="bi bi-clock-fill text-primary me-2"></i><strong>Horario:</strong> Lunes a
+                    Viernes, 9:00 - 18:00</li>
+                  <li><i class="bi bi-geo-alt text-primary me-2"></i><strong>Dirección:</strong> Av. Reforma 123, CDMX,
+                    México</li>
+                </ul>
+
+                <div class="mt-4">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.6858486831125!2d-99.19627392611493!3d19.425974940895035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201dc1b5f6d75%3A0xf73ab32f5c6c4fee!2sAv.%20P.%C2%BA%20de%20la%20Reforma%2C%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1762673975164!5m2!1ses-419!2smx" width="100%" height="200"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-body-tertiary">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <small class="text-muted">
+          © 2025 Todos los derechos reservados
+          <i class="bi bi-facebook ms-2"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-linkedin"></i>
+        </small>
+      </div>
+    </footer>
+  </main>
+
+
+</body>
+
+</html>

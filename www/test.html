@@ -1,0 +1,85 @@
+<!--
+<html>
+  <head>
+    <title>Tailwind Example</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  </head>
+<body class="bg-[#080808] m-6">
+  <figure class="max-w-96 rounded-xl p-8 dark:bg-teal-950">
+    <img class="w-24 h-24 rounded-full mx-auto"
+      src="https://lenguajecss.com/assets/images/manzdev-hover.webp"
+      alt="ManzDev Tailwind" width="24" height="24">
+    <blockquote>
+      <p class="text-lg font-medium text-white m-8">
+        “Tailwind CSS is the only framework I've seen used by large teams
+        because apparently no one wants to actually learn real CSS. And
+        the excuses are always like, 'With Tailwind, I don’t have to
+        think about naming classes.”
+      </p>
+    </blockquote>
+    <figcaption class="font-medium">
+      <div class="text-teal-500 dark:text-teal-400">
+        ManzDev
+      </div>
+      <div class="text-teal-900 dark:text-teal-800">
+        CSS Engineer, EvilGoose
+      </div>
+      <button class="bg-blue-500 rounded hover:bg-blue-600">Enviar</button>
+    </figcaption>
+  </figure>
+</body>
+</html>-->
+<style>
+  body {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 30%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #4f46e5;
+}
+
+.card p {
+  color: #444;
+}
+
+</style>
+<div class="container">
+  <div class="card">
+    <h3>Item 1</h3>
+    <p>Descripción breve del elemento uno.</p>
+  </div>
+
+  <div class="card">
+    <h3>Item 2</h3>
+    <p>Descripción breve del elemento dos.</p>
+  </div>
+
+  <div class="card">
+    <h3>Item 3</h3>
+    <p>Descripción breve del elemento tres.</p>
+  </div>
+</div>
