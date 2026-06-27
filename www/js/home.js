@@ -14,13 +14,12 @@ function cargarDatosHome() {
 
     const user = JSON.parse(usuarioRaw);
     
-    const API_BASE_URL = "http://127.0.0.1:5000";
+    const API_BASE_URL = "http://davechessington.pythonanywhere.com";
 
     const avatarImg = document.getElementById('avatarUsuario');
     const userNameTxt = document.getElementById("username");
     const mailTxt = document.getElementById("email");
 
-    // 4. Inyectamos los datos validando de forma segura
     if (avatarImg) {
         avatarImg.src = `${API_BASE_URL}/users/profile_photo/${user.id}`;
         // Si el usuario no tiene foto o falla el endpoint, ponemos una por defecto

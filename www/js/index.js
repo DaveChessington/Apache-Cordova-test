@@ -32,8 +32,7 @@ function onDeviceReady() {
     }
 }
 
-//const API_BASE_URL = "http://davechessington.pythonanywhere.com"; 
-const API_BASE_URL = "http://127.0.0.1:5000"
+const API_BASE_URL = "http://davechessington.pythonanywhere.com";
 
 async function handleLogin(event) {
     event.preventDefault(); //avoid reloading
