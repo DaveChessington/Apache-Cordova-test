@@ -32,8 +32,6 @@ function onDeviceReady() {
     }
 }
 
-const API_BASE_URL = "http://davechessington.pythonanywhere.com";
-
 async function handleLogin(event) {
     event.preventDefault(); //avoid reloading
 
@@ -61,8 +59,6 @@ async function handleLogin(event) {
             throw new Error(data.Error || "Error desconocido en el servidor");
         }
 
-        alert(`¡Bienvenido de vuelta, ${data.user.name}!`);
-
         //mostrarContenidoUsuario(data.user);
 
         localStorage.setItem("usuarioLogueado", JSON.stringify(data.user));
@@ -77,26 +73,7 @@ async function handleLogin(event) {
 }
 
 
-function mostrarAlerta(mensaje) {
-    const form = document.querySelector('form');
-    
-    const alertDiv = document.createElement('div');
-    alertDiv.id = "loginAlert";
-    alertDiv.className = "alert alert-danger alert-dismissible fade show small py-2 mt-3";
-    alertDiv.role = "alert";
-    alertDiv.innerHTML = `
-        <strong>Error:</strong> ${mensaje}
-        <button type="button" class="btn-close small py-2.5" data-bs-dismiss="alert" aria-label="Close"></button>
-    `;
-    form.insertBefore(alertDiv, form.firstChild);
-}
 
-function removerAlerta() {
-    const alertaExistente = document.getElementById('loginAlert');
-    if (alertaExistente) {
-        alertaExistente.remove();
-    }
-}
 /*
 function mostrarContenidoUsuario(user) {
     const avatarImg = document.getElementById('avatarUsuario');
