@@ -19,5 +19,8 @@
     "platforms": [
       "browser"
     ]
+  },
+  "dependencies": {
+    "cordova": "^13.0.0"
   }
 }

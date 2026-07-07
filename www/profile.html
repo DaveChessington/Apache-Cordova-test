@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Profile</title>
+    <script src="js/components/base.js"></script>
+  </head>
+  <body>
+    <div id="layout-root"></div>
+
+    <div class="d-flex justify-content-center py-4">
+      <article
+        class="card shadow border-0 rounded-4 overflow-hidden"
+        style="max-width: 22rem; width: 100%"
+      >
+        <div
+          class="position-relative bg-secondary-subtle"
+          style="height: 220px"
+        >
+          <img
+            id="avatarUsuario"
+            class="w-100 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80"
+            alt="John Doe's profile avatar"
+          />
+        </div>
+
+        <form id="profileForm" class="card-body p-4">
+          <header class="mb-4">
+            <span
+              class="text-uppercase text-xs fw-bold text-primary tracking-wider d-block mb-1"
+              >Account</span
+            >
+            <h1 class="h4 fw-bold text-dark mb-0">Profile Info</h1>
+          </header>
+
+          <div class="mb-4">
+            <label
+              for="avatarInput"
+              class="btn btn-outline-primary btn-sm w-100 rounded-3"
+            >
+              <i class="bi bi-camera me-2"></i>Change Avatar
+            </label>
+            <input
+              type="file"
+              id="avatarInput"
+              accept="image/*"
+              class="visually-hidden"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label
+              for="username"
+              class="form-label small fw-semibold text-secondary"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="username"
+              class="form-control-plaintext h5 fw-bold text-dark p-0 mb-0"
+              value="John Doe"
+            />
+            <label
+              for="role"
+              class="form-label small fw-semibold text-secondary"
+              >Role</label
+            >
+            <input
+              type="text"
+              id="role"
+              class="form-control-plaintext h5 fw-bold text-dark p-0 mb-0"
+              value="User" readonly
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="email"
+              class="form-label small fw-semibold text-secondary"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="form-control-plaintext text-muted p-0 mb-0"
+              value="john.doe@example.com"
+              readonly
+            />
+          </div>
+
+          <hr class="my-4 text-muted opacity-25" />
+
+          <div class="mb-3">
+            <label
+              for="password"
+              class="form-label small fw-semibold text-secondary"
+              >New Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              class="form-control rounded-3"
+              placeholder="Enter new password"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              for="confirmPassword"
+              class="form-label small fw-semibold text-secondary"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              id="confirmPassword"
+              class="form-control rounded-3"
+              placeholder="Repeat new password"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <!-- Form Submission / Navigation Actions -->
+          <div class="d-grid gap-2 pt-2">
+            <button
+              type="submit"
+              class="btn btn-primary rounded-3 py-2 fw-semibold"
+            >
+              Update Profile
+            </button>
+            <a
+              href="home.html"
+              class="btn btn-link link-secondary text-decoration-none btn-sm mt-1"
+              >Back to Home</a
+            >
+          </div>
+        </form>
+      </article>
+    </div>
+  </body>
+</html>

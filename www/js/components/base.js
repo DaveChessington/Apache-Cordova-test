@@ -9,6 +9,7 @@
         'cordova.js',
         'js/env.js',
         'js/components/layout.js',
+        'js/components/functions.js',
         'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'
     ];
 

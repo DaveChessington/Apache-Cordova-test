@@ -38,28 +38,14 @@ async function handleLogin(event) {
     const email = document.getElementById('emailInput').value;
     const password = document.getElementById('passwordInput').value;
     const submitBtn = event.target.querySelector('button[type="submit"]');
-    
+
     const originalBtnText = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Verificando...`;
     removerAlerta();
 
     try {
-        const response = await fetch(`${API_BASE_URL}/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: email, password: password })
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.Error || "Error desconocido en el servidor");
-        }
-
-        //mostrarContenidoUsuario(data.user);
+        const data = await login(email, password);
 
         localStorage.setItem("usuarioLogueado", JSON.stringify(data.user));
 
@@ -71,22 +57,3 @@ async function handleLogin(event) {
         submitBtn.innerHTML = originalBtnText;
     }
 }
-
-
-
-/*
-function mostrarContenidoUsuario(user) {
-    const avatarImg = document.getElementById('avatarUsuario');
-    
-    if (avatarImg) {
-        avatarImg.src = `${API_BASE_URL}/users/profile_photo/${user.id}`;
-    }
-    const user_name= document.getElementById("username")
-    const mail=document.getElementById("email")
-    if (user_name) {
-        user_name.textContent = user.name; 
-    }
-    if (mail) {
-        mail.textContent = user.email;
-    }
-}*/

@@ -13,26 +13,13 @@ function cargarDatosHome() {
     }
 
     const user = JSON.parse(usuarioRaw);
+
+    /*const avatarImg = document.getElementById('miniature');
+    const emailSpan = document.getElementById('miniature_email');
+
+    // Actualizamos la imagen y el correo electrónico en la barra de navegación
+    avatarImg.src = `${API_BASE_URL}${user.avatar}`;
+    emailSpan.textContent = user.email;*/
+
     
-    const API_BASE_URL = "http://davechessington.pythonanywhere.com";
-
-    const avatarImg = document.getElementById('avatarUsuario');
-    const userNameTxt = document.getElementById("username");
-    const mailTxt = document.getElementById("email");
-
-    if (avatarImg) {
-        avatarImg.src = `${API_BASE_URL}/users/profile_photo/${user.id}`;
-        // Si el usuario no tiene foto o falla el endpoint, ponemos una por defecto
-        avatarImg.onerror = function() {
-            this.src = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80";
-        };
-    }
-
-    if (userNameTxt) {
-        userNameTxt.textContent = user.name;
-    }
-
-    if (mailTxt) {
-        mailTxt.textContent = user.email;
-    }
 }
