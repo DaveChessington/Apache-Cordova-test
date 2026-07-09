@@ -17,7 +17,7 @@
         index: ['js/components/alerts.js', 'js/index.js'],
         signup: ['js/components/alerts.js', 'js/signup.js'],
         home: ['js/home.js'],
-        profile: ['js/profile.js'],
+        profile: ['js/components/alerts.js', 'js/profile.js'],
         admin: ['js/admin.js']
     };
 

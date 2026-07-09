@@ -20,8 +20,7 @@
           <img
             id="avatarUsuario"
             class="w-100 h-100 object-fit-cover"
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80"
-            alt="John Doe's profile avatar"
+            alt="profile avatar"
           />
         </div>
 
@@ -45,7 +44,7 @@
               type="file"
               id="avatarInput"
               accept="image/*"
-              class="visually-hidden"
+              class="d-none"
             />
           </div>
 
@@ -59,18 +58,14 @@
               type="text"
               id="username"
               class="form-control-plaintext h5 fw-bold text-dark p-0 mb-0"
-              value="John Doe"
+              value=""
             />
-            <label
-              for="role"
-              class="form-label small fw-semibold text-secondary"
-              >Role</label
-            >
+            <label for="role">Rol</label>
             <input
               type="text"
               id="role"
               class="form-control-plaintext h5 fw-bold text-dark p-0 mb-0"
-              value="User" readonly
+              value=""
             />
           </div>
 
@@ -84,9 +79,16 @@
               type="email"
               id="email"
               class="form-control-plaintext text-muted p-0 mb-0"
-              value="john.doe@example.com"
+              value=""
               readonly
             />
+
+            <label for="createdAt" class="form-label small fw-semibold text-secondary"
+              >Member Since</label>
+            <input type="text" id="createdAt" class="form-control-plaintext text-muted p-0 mb-0" value="" readonly />
+            <label for="updatedAt" class="form-label small fw-semibold text-secondary"
+              >Last updated</label>
+            <input type="text" id="updatedAt" class="form-control-plaintext text-muted p-0 mb-0" value="" readonly />
           </div>
 
           <hr class="my-4 text-muted opacity-25" />

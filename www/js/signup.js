@@ -31,29 +31,18 @@ async function handleSignup(event) {
         return;
     }
 
-    try {
-        const response = await fetch(`${API_BASE_URL}/users`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email,
-                name,
-                password
-            })
-        });
-
-        const data = await response.json();
-
-        if (!response.ok) {
+    try{
+        const response=await registerUser(email, name, password);
+        if (response.ok) {
+            alert('Solicitud de registro, espere a que un administrador apruebe su cuenta');
+            window.location.href = 'index.html';
+        } else {
+            const data = await response.json();
             throw new Error(data.Error || 'Error desconocido en el servidor');
         }
-
-        alert('Solicitud de registro, espere a que un administrador apruebe su cuenta');
-        window.location.href = 'index.html';
-    } catch (error) {
-        console.log('Error al conectar con el servidor:', error);
-        mostrarAlerta('Error al conectar con el servidor');
+    }
+    catch (error) {
+        console.error('Error during registration:', error);
+        mostrarAlerta(error.message || 'Error desconocido en el servidor');
     }
 }
