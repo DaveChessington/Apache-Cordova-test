@@ -46,10 +46,14 @@ async function handleLogin(event) {
 
     try {
         const data = await login(email, password);
+        const currentUser = data.user || null;
 
-        localStorage.setItem("usuarioLogueado", JSON.stringify(data.user));
+        localStorage.setItem('usuarioLogueado', JSON.stringify(currentUser));
 
-        window.location.href = "home.html";
+        const role = (currentUser?.role || currentUser?.rol || '').toString().toLowerCase();
+        const isAdmin = ['admin', 'administrator', 'administrador', 'superadmin', 'super-admin'].includes(role);
+
+        window.location.href = isAdmin ? 'templates/admin/user_list.html' : 'templates/user/home.html';
     } catch (error) {
         mostrarAlerta(error.message);
     } finally {

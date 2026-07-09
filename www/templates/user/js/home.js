@@ -13,13 +13,11 @@ function cargarDatosHome() {
     }
 
     const user = JSON.parse(usuarioRaw);
+    const role = (user.role || user.rol || '').toString().toLowerCase();
+    const isAdmin = ['admin', 'administrator', 'administrador', 'superadmin', 'super-admin'].includes(role);
 
-    /*const avatarImg = document.getElementById('miniature');
-    const emailSpan = document.getElementById('miniature_email');
-
-    // Actualizamos la imagen y el correo electrónico en la barra de navegación
-    avatarImg.src = `${API_BASE_URL}${user.avatar}`;
-    emailSpan.textContent = user.email;*/
-
-    
+    if (isAdmin) {
+        console.log('Usuario administrador detectado. Redirigiendo al panel de administración.');
+        window.location.href = 'templates/admin/user_list.html';
+    }
 }

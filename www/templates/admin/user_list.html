@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin Console</title>
+    <script src="../../js/components/base.js"></script>
+  </head>
+  <body>
+    <div id="layout-root"></div>
+
+    <div class="container my-4">
+      <table class="table table-dark table-striped table-hover table-bordered">
+        <thead>
+          <tr class="table-active">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>created</th>
+            <th>updated</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active">
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john.doe@example.com</td>
+            <td>2023-01-01</td>
+            <td>2023-01-02</td>
+            <td>
+              <button class="btn btn-primary btn-sm">
+                <i class="bi bi-pencil-square"></i> Edit
+              </button>
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
