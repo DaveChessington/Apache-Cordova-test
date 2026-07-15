@@ -17,10 +17,46 @@ async function login(email, password) {
     return data;
 }
 
+//get users
+async function getUsers(){
+    const response= await fetch(`${window.API_BASE_URL}/users`);
+    const data= await response.json().catch(()=>({}));
+    if(!response.ok){
+        throw new Error(data.Error || data.error || 'Error desconocido en el servidor');
+    }
+    return data;
+}
+
+async function getUser(id){
+    const response = await fetch(`${window.API_BASE_URL}/users/${id}`);
+    const data= await response.json().catch(()=>({}));
+    if(!response.ok){
+        throw new Error(data.Error || data.error || 'Error desconocido en el servidor');
+    }
+    return data;
+}
+
+async function deleteUser(id) {
+    if (!id) {
+        throw new Error('Faltan datos requeridos');
+    }
+
+    const response = await fetch(`${window.API_BASE_URL || ''}/users/${id}`, {
+        method: 'DELETE'
+    });
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+        throw new Error(data.Error || data.error || `Error desconocido en el servidor: ${response.status}`);
+    }
+
+    return data;
+}
+
 //register new user
 async function registerUser(email, name, password) {
     try {
-        const response = await fetch(`${API_BASE_URL}/users`, {
+        const response = await fetch(`${window.API_BASE_URL}/users`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +83,7 @@ async function registerUser(email, name, password) {
 }
 
 //update user profile
-async function updateUserProfile(userId, name, password) {
+async function updateUserProfile(userId,email, name, password, role,is_approved) {
     if (!userId) {
         throw new Error('Faltan datos requeridos');
     }
@@ -56,7 +92,7 @@ async function updateUserProfile(userId, name, password) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ name, password })
+        body: JSON.stringify({ email, name, password, role })
     });
 
     const data = await response.json().catch(() => ({}));

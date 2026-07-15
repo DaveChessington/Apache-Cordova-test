@@ -15,6 +15,9 @@ function attachSignupHandler() {
 
 document.addEventListener('deviceready', attachSignupHandler, false);
 document.addEventListener('DOMContentLoaded', attachSignupHandler, false);
+if (document.readyState !== 'loading') {
+    attachSignupHandler();
+}
 
 async function handleSignup(event) {
     event.preventDefault();

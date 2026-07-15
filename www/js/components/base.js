@@ -1,4 +1,16 @@
 (function () {
+    function getAppRootUrl() {
+        const currentScript = document.currentScript || document.querySelector('script[src*="js/components/base.js"]');
+        const baseUrl = currentScript ? new URL(currentScript.src, window.location.href) : new URL(window.location.href);
+        return new URL('../../..', baseUrl);
+    }
+
+    function resolveAppPath(path) {
+        if (!path) return path;
+        if (/^(https?:)?\/\//i.test(path) || path.startsWith('data:')) return path;
+        return new URL(path.replace(/^\.?\//, ''), getAppRootUrl()).toString();
+    }
+
     const styles = [
         'css/styles.css',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
@@ -16,9 +28,11 @@
     const pageScripts = {
         index: ['js/components/alerts.js', 'js/index.js'],
         signup: ['js/components/alerts.js', 'js/signup.js'],
-        home: ['js/home.js'],
+        home: ['templates/user/js/home.js'],
         profile: ['js/components/alerts.js', 'js/profile.js'],
-        admin: ['js/admin.js']
+        admin: ['js/admin.js'],
+        user_list: ['templates/admin/js/user_list.js'],
+        modify_user: ['js/components/alerts.js', 'templates/admin/js/modify_users.js']
     };
 
     const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
@@ -27,7 +41,7 @@
     styles.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = href;
+        link.href = resolveAppPath(href);
         document.head.appendChild(link);
     });
 
@@ -37,7 +51,7 @@
         }
 
         const script = document.createElement('script');
-        script.src = list[index];
+        script.src = resolveAppPath(list[index]);
         script.async = false;
         script.onload = () => loadScriptsSequentially(list, index + 1);
         script.onerror = () => loadScriptsSequentially(list, index + 1);

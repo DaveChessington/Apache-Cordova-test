@@ -1,5 +1,7 @@
-// Esperamos a que el HTML de home.html esté completamente cargado en el DOM
 document.addEventListener('DOMContentLoaded', cargarDatosHome);
+if (document.readyState !== 'loading') {
+    cargarDatosHome();
+}
 
 function cargarDatosHome() {
     console.log('Home cargado. Recuperando sesión...');
