@@ -53,6 +53,32 @@ async function deleteUser(id) {
     return data;
 }
 
+//create users
+async function createUser(email, name, password, role, is_approved, avatar) {
+    const response = await fetch(`${window.API_BASE_URL || ''}/users`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, name, password, role, is_approved, is_aproved: is_approved })
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+        throw new Error(data.Error || data.error || 'Error desconocido en el servidor');
+    }
+
+    if (avatar) {
+        const userId = data.id || (data.user && data.user.id);
+        if (userId) {
+            await updateAvatarPic(userId, avatar);
+        }
+    }
+
+    return data;
+}
+
 //register new user
 async function registerUser(email, name, password) {
     try {
@@ -92,7 +118,7 @@ async function updateUserProfile(userId,email, name, password, role,is_approved)
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, name, password, role })
+        body: JSON.stringify({ email, name, password, role, is_approved, is_aproved: is_approved })
     });
 
     const data = await response.json().catch(() => ({}));

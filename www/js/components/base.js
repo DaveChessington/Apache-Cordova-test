@@ -32,7 +32,8 @@
         profile: ['js/components/alerts.js', 'js/profile.js'],
         admin: ['js/admin.js'],
         user_list: ['templates/admin/js/user_list.js'],
-        modify_user: ['js/components/alerts.js', 'templates/admin/js/modify_users.js']
+        modify_user: ['js/components/alerts.js', 'templates/admin/js/modify_users.js'],
+        add_user: ['js/components/alerts.js', 'templates/admin/js/add_user.js']
     };
 
     const pageName = window.location.pathname.split('/').pop().replace('.html', '') || 'index';

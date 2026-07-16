@@ -61,7 +61,7 @@ function loadUserData() {
             if (nameInput) nameInput.value = user.name || '';
             if (emailInput) emailInput.value = user.email || '';
             if (roleInput) roleInput.value = user.role || 'user';
-            loginApprovedLabel.checked = user.is_approved || false;
+            loginApprovedLabel.checked = user.is_aproved || user.is_approved || false;
         })
         .catch(error => {
             console.error('Error al cargar datos del usuario:', error);

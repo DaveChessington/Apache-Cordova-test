@@ -4,6 +4,12 @@ function init() {
     if (userListContainer) {
         userListContainer.addEventListener('click', handleUserListClick);
     }
+    const addButton = document.getElementById('add-user-btn');
+    if (addButton) {
+        addButton.addEventListener('click', function() {
+            window.location.href = 'add_user.html';
+        });
+    }
 }
 
 if (document.readyState !== 'loading') {
